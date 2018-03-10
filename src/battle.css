@@ -1,0 +1,412 @@
+/* BATTLE */
+.battle-container {
+  display: grid;
+  grid-template-columns: 5% 40% 10% 40% 5%;
+  grid-template-rows: 5% 10% auto;
+  height: 100vh;
+  transition: all 1s ease;
+
+}
+
+#start-button {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6em;
+  font-weight: normal;
+  color: #FFF;
+  background-color: #330000;
+  border:none;
+  margin: 4%;
+  box-shadow: 1px 3px 4px #663300;
+  z-index: 10;
+  transition: all .5s ease;
+  /* border: solid 5px #330000; */
+}
+
+#start-button:hover {
+  background-color: #CC9933;
+  margin: 0;
+}
+
+.top-filler-left {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: #CC9933;
+  width: 100%;
+  height: 100%;
+  box-shadow: 3px 3px 5px #000;
+  z-index: 5;
+}
+
+.allies-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  background-color: #CCC;
+  overflow: scroll;
+}
+
+#ally-label {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  background-color: #CC9933;
+  padding: 1.5%;
+  color: #663300;
+  text-shadow: 2px 2px 3px #FFCC66;
+  z-index: 10;
+}
+
+#enemy-label {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  text-align: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  background-color: #CC9933;
+  padding: 1.5%;
+  color: #663300;
+  text-shadow: 2px 2px 3px #FFCC66;
+  z-index: 10;
+
+}
+
+.enemies-container {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  background-color: #CCC;
+  overflow: scroll;
+}
+
+.battle-character-container {
+}
+
+.battle-name {
+  text-align: center;
+  background-color: #330000;
+  color: white;
+  padding: 1%;
+  margin-bottom: 2%;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.battle-stats {
+  font-weight: bold;
+  width: 60%;
+  margin: auto;
+}
+
+.health-bar {
+  float: left;
+  display: block;
+  width: 50%;
+  font-size: 1.4em;
+
+}
+
+.heart {
+  float: left;
+  display: block;
+  background-image: url('./images/heart.png');
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.mana-bar {
+  float: right;
+  display: block;
+  width: 45%;
+  margin-left: 5%;
+  font-size: 1.4em;
+}
+
+.mana {
+  float: left;
+  display: block;
+  background-image: url('./images/mana.png');
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.battle-char {
+  width: 45%;
+  height: 42vh;
+}
+
+.battle-box {
+  margin: 2%;
+  float: left;
+  display: block;
+  background: white;
+}
+
+.active-battler {
+  background-color: #330000;
+  color: white;
+}
+
+.swamp-world {
+  background: linear-gradient(-15deg, #000033, #333366);
+}
+
+.forest-world {
+  background: linear-gradient(-15deg, #003300, #336633);
+}
+
+.field-world {
+  background: linear-gradient(-15deg, #FFCC66, #cccc99);
+}
+
+.mountain-world {
+  background: linear-gradient(-15deg, #660000, #993333);
+}
+
+.castle-world {
+  background: linear-gradient(-15deg, #000033, #6699cc);
+}
+
+.dead {
+  opacity: .5;
+}
+
+#dice-tray {
+  position: fixed;
+  background: white;
+  width: 50%;
+  top: 70%;
+  left: 24%;
+  box-shadow: inset 3px 3px 5px #000;
+  height: 20%;
+  border: solid 10px #330000;
+}
+
+#roll-button {
+  border: none;
+  width: 15%;
+  height: 70%;
+  margin: 4% 3%;
+  color: white;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  font-size: 2em;
+  display: block;
+  float: right;
+  background-color: #330000;
+  transition: all .5s ease;
+}
+
+#roll-button:hover {
+  transform: rotate(360deg);
+}
+
+.dice-lock {
+  display: block;
+  float: left;
+  width: 11%;
+  height: 90%;
+  margin: 2% 1%;
+}
+
+.heart-dice {
+  background-image: url('./images/dice-04.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 60%;
+  margin: 5% auto;
+}
+
+.sword-dice {
+  background-image: url('./images/dice-03.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 60%;
+  margin: 5% auto;
+
+}
+
+.mana-dice {
+  background-image: url('./images/dice-05.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 60%;
+  margin: 5% auto;
+
+}
+
+.locked {
+  background-image: url('./images/locks-07.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 28%;
+  margin: auto;
+}
+
+.unlocked {
+  background-image: url('./images/locks-06.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 28%;
+  margin: auto;
+}
+
+.die-check {
+  display: none;
+}
+
+#damage-tray {
+  grid-row-start: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: center;
+  background: #CCC;
+  height: 45%;
+  margin: 50% 5% 0;
+  display: block;
+}
+
+#damage-tray h1 {
+  font-size: 7em;
+  margin: 0;
+  color: #660000;
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+#damage-tray h2 {
+
+}
+
+#damage-tray h3 {
+
+}
+
+#spell-tray {
+  grid-row-start: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: center;
+  margin: 260% 5% 0;
+  background: white;
+  height: 30%;
+    display: block;
+}
+
+#spell-tray button {
+  border: none;
+  width: 90%;
+  font-family: 'Libre Baskerville', serif;
+  padding: 3%;
+  margin: 4% auto;
+  font-size: 1em;
+  background: #330000;
+  color: white;
+  transition: all .5s ease;
+}
+
+#spell-tray button:hover {
+  background: black;
+  width: 100%;
+}
+
+#battlefield-link-button {
+  width: 80%;
+  height: 13%;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  z-index: 1;
+  margin: -20% auto 0 auto;
+  font-size: 1.3em;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  padding: 20% 0 0 0;
+  box-shadow: 0px 3px 2px #000;
+  background-color: #CCCCCC;
+  color: #000;
+  transition: margin .5s ease;
+  border-radius: 10px;
+}
+
+#battlefield-link-button:hover {
+  margin: -10% auto 0 auto;
+}
+
+.result {
+  position: fixed;
+  width: 40%;
+  margin: auto;
+  height: 6%;
+  text-align: center;
+  background: #330000;
+  z-index: 20;
+  top: 50%;
+  left: 26%;
+  box-shadow: 3px 3px 5px #000;
+  color: white;
+  font-size: 2em;
+  padding: 4%;
+}
+
+#map-complete {
+  background: white;
+  width: 40%;
+  height: 20%;
+  text-align: center;
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  box-shadow: 3px 3px 5px #000;
+}
+
+#map-complete div {
+  font-size: 2em;
+  margin: 5% 0;
+  width: 98%;
+  background-color: #330000;
+  color: white;
+  padding: 1%;
+}
+
+#map-complete button {
+  border: none;
+  background-color: #CC9933;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.3em;
+  padding: 1% 2%;
+  transition: all .5s ease;
+  width: 30%;
+}
+
+#map-complete button:hover {
+  background-color: #330000;
+  width: 40%;
+  color: white;
+}

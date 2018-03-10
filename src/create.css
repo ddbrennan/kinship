@@ -1,0 +1,129 @@
+.nca-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-char-avatar {
+  width: 80%;
+}
+
+#new-char-form {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  text-align: center;
+  background: #CCC;
+  height: 80%;
+  margin: 7% 0 0 0;
+}
+
+#new-char-form input {
+  font-size: 2em;
+  font-family: 'Libre Baskerville', serif;
+  width: 60%;
+  margin: 6% auto 2%;
+  text-align: center;
+}
+
+#create-container {
+  background: linear-gradient(-15deg, #330000, #660000);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% 35% 35% 15%;
+  grid-template-rows: 5% 10% 5% 75%  5%;
+}
+
+#class-select div .chosen-r {
+  background-color: #CC9933;
+  padding: 3% 5%;
+}
+
+#armor-color-select div .chosen-r {
+  background-color: #CC9933;
+  padding: 3% 5%;
+}
+
+#accent-color-select div .chosen-r {
+  background-color: #CC9933;
+  padding: 3% 5%;
+}
+
+#create-container h3 {
+  color: black;
+  font-size: 1.7em;
+  margin: 0;
+}
+
+#class-select div div {
+  width: 15%;
+  display: inline-block;
+  float: left;
+  background-color: white;
+  margin: 2%;
+  padding: 3% 2%;
+  transition: all .5s ease;
+}
+
+#class-select {
+  width: 80%;
+  margin: 3% auto 15%;
+  text-align: center;
+}
+
+#armor-color-select div div {
+  width: 15%;
+  display: inline-block;
+  float: left;
+  background-color: white;
+  margin: 2%;
+  padding: 3% 2%;
+  transition: all .5s ease;
+}
+
+#armor-color-select{
+  width: 80%;
+  margin: 10% auto 15%;
+  text-align: center;
+}
+
+.create-options {
+  width: 80%;
+  margin: auto;
+}
+
+#accent-color-select div div {
+  width: 15%;
+  display: inline-block;
+  float: left;
+  background-color: white;
+  margin: 2%;
+  padding: 3% 2%;
+  transition: all .5s ease;
+}
+
+#accent-color-select {
+  width: 80%;
+  margin: 10% auto 15%;
+  text-align: center;
+}
+
+#create-char {
+  border: none;
+  font-family: 'Libre Baskerville', serif;
+  padding: 1% 2%;
+  color: white;
+  background: #330000;
+  font-size: 1.3em;
+  transition: all 1s ease;
+  width: 35%;
+}
+
+#create-char:hover {
+  width: 55%;
+}
