@@ -49,12 +49,13 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path='/battlefield' component={AuthBattlefield} />
-          <Route exact path='/store' component={AuthStore} />
-          <Route exact path='/party' component={AuthParty} />
-          <Route exact path='/battle' component={AuthBattle} />
-          <Route exact path="/home" component={AuthHome} />
-          <Redirect from="/" to="/home" />
+          <Route exact path='/battlefield' render={ (routerProps) => < AuthBattlefield routerProps={routerProps} />} />
+          <Route exact path='/store' render={ (routerProps) => < AuthStore routerProps={routerProps} />} />
+          <Route exact path='/party' render={ (routerProps) => < AuthParty routerProps={routerProps} />} />
+          <Route exact path='/battle' render={ (routerProps) => < AuthBattle routerProps={routerProps} />} />
+          <Route exact path='/home' render={ (routerProps) => < AuthHome routerProps={routerProps} />} />
+          <Route exact path='/' render={ (routerProps) => < AuthHome routerProps={routerProps} />} />
+          <Redirect from='/' to="/home" />
         </Switch>
       </div>
     );

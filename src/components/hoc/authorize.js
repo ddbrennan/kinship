@@ -5,9 +5,9 @@ const authorize = RenderedComponent => {
   return class extends React.Component {
 
     render() {
-      if ( localStorage.getItem("jwt") && this.props.location.pathname === "/home" ) {
+      if ( localStorage.getItem("jwt") && this.props.routerProps.location.pathname === "/home" ) {
         return <Redirect to="/party" />;
-      } else if ( !localStorage.getItem("jwt") && this.props.location.pathname !== "/home") {
+      } else if ( !localStorage.getItem("jwt") && this.props.routerProps.location.pathname !== "/home") {
         return <Redirect to="/home" />;
       } else {
         return <RenderedComponent />;

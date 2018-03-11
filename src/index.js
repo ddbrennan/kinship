@@ -15,7 +15,7 @@ import { store } from './store.js';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <App />
     </Router>
   </Provider>, document.getElementById('root'));
